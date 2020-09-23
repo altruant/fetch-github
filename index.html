@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>altruant/fetch-github</title>
+
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   </head>
   <body>
     <div id="user-repositories-list"></div>
@@ -12,11 +14,11 @@
           <li>
             <div class="block">
               <div class="info">
-                <div class="title"><span class="repo-name">{{this.name}}</span></div>
+                <div class="title"><span class={{this.name}}>{{this.name}}</span></div>
                 <div class="update"><span class="updated-when">Updated at {{this.updated_at}}</span></div>
               </div>
               <div class="side">
-                <a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-star" data-size="large" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+                <button><span class="iconify" data-icon="ant-design:star-outlined" data-inline="false"></span>Star</button>
               </div>
             </div>
           </li>
