@@ -1,0 +1,124 @@
+body {
+  font-family: "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+ul {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.block {
+  display: flex;
+  padding: 24px 0;
+  border-bottom: 1px solid #e1e4e8;
+}
+.block .top {
+  margin-bottom: 3px;
+}
+.block .middle {
+  margin-bottom: 8px;
+}
+.block .bottom {
+  display: flex;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.block .info {
+  display: inline-flex;
+  flex-direction: column;
+  width: 60vw;
+}
+
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.language {
+  margin: 0 16px 0 0;
+}
+
+.HTML:before {
+  vertical-align: middle;
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: #e34c26;
+  margin-right: 8px;
+}
+
+.JavaScript:before {
+  vertical-align: middle;
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: #f1e05a;
+  margin-right: 8px;
+}
+
+.CSS:before {
+  vertical-align: middle;
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: #563d7c;
+  margin-right: 8px;
+}
+
+.text-gray {
+  color: #586069;
+}
+
+h3, h4 {
+  font-weight: 600;
+  font-size: 1.4em;
+  display: inline;
+}
+
+.star {
+  padding: 3px 12px;
+  font-size: 12px;
+  line-height: 20px;
+  border: 1px solid;
+  border-radius: 6px;
+  vertical-align: middle;
+  position: relative;
+  display: inline-block;
+  color: #24292e;
+  background-color: #fafbfc;
+  border-color: rgba(27, 31, 35, 0.15);
+  box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+}
+.star .iconify {
+  margin-right: 4px;
+  vertical-align: middle;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.star > .text {
+  vertical-align: middle;
+  font-weight: 600;
+}
+.star:hover {
+  background-color: #eaebec;
+}
+
+/*# sourceMappingURL=styles.css.map */
