@@ -35,13 +35,17 @@ li {
   display: inline-flex;
   flex-direction: column;
   width: 60vw;
+  padding-right: 25vw;
 }
 
 a {
-  color: #0366d6;
   text-decoration: none;
+  color: #586069;
 }
-a:hover {
+a.repo-link {
+  color: #0366d6;
+}
+a.repo-link:hover {
   text-decoration: underline;
 }
 
@@ -57,7 +61,7 @@ a:hover {
   height: 12px;
   border-radius: 100%;
   background-color: #e34c26;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 .JavaScript:before {
@@ -68,7 +72,7 @@ a:hover {
   height: 12px;
   border-radius: 100%;
   background-color: #f1e05a;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 .CSS:before {
@@ -79,7 +83,7 @@ a:hover {
   height: 12px;
   border-radius: 100%;
   background-color: #563d7c;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 .SCSS:before {
@@ -103,7 +107,7 @@ h3, h4 {
   display: inline;
 }
 
-.star {
+button {
   padding: 3px 12px;
   font-size: 12px;
   line-height: 20px;
@@ -118,17 +122,17 @@ h3, h4 {
   box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.25);
   transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
 }
-.star .iconify {
+button .iconify {
   margin-right: 4px;
   vertical-align: middle;
   font-size: 1.5em;
   font-weight: bold;
 }
-.star > .text {
+button > .text {
   vertical-align: middle;
   font-weight: 600;
 }
-.star:hover {
+button:hover {
   background-color: #eaebec;
 }
 

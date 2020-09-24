@@ -43,18 +43,22 @@ li {
     display: inline-flex;
     flex-direction: column;
     width: 60vw;
+    padding-right: 25vw;
   }
 }
-
 
 a {
-  color: $bg-blue;
   text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
+  color: $gray;
+  &.repo-link{
+    color: $bg-blue;
+    &:hover{
+      text-decoration: underline;
+    }
   }
 }
+
+
 
 .language {
   margin: 0 16px 0 0;
@@ -68,7 +72,7 @@ a {
   height: 12px;
   border-radius: 100%;
   background-color: $scarlet-red;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 .JavaScript:before {
   vertical-align: middle;
@@ -78,7 +82,7 @@ a {
   height: 12px;
   border-radius: 100%;
   background-color: $mellow-yellow;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 .CSS:before {
   vertical-align: middle;
@@ -88,7 +92,7 @@ a {
   height: 12px;
   border-radius: 100%;
   background-color: $plum-purple;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 .SCSS:before {
   vertical-align: middle;
@@ -110,7 +114,7 @@ h3, h4 {
   display: inline;
 }
 
-.star {
+button {
   padding: 3px 12px;
   font-size: 12px;
   line-height: 20px;

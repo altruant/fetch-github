@@ -9,7 +9,47 @@
     <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
+    <div id="user-info"></div>
     <div id="user-repositories-list"></div>
+    <script id="info-template" type="text/x-handlebars-template">
+      <div id="infobox">
+        <div class="userinfo-top">
+          <div class="img-block">
+            <img src="{{avatar_url}}">
+          </div>
+          <div class="info-block">
+            <h2 class="names">
+              <span class="fullname">{{name}}</span>
+              <span class="nickname">{{login}}</span>
+            </h2>
+          </div>
+        </div>
+        <div class="userinfo-bottom">
+          <button class="edit-profile">Edit Profile</button>
+          <div class="social">
+            <a href="{{followers_url}}" class="follower-link">
+              <span class="iconify" data-icon="tabler:users" data-inline="false"></span>
+              <span class="follower-count">{{followers}}</span>
+              {{#isOne followers}}
+                <span class="follower-text"></span>
+              {{else}}
+                <span class="follower-text"></span>
+              {{/isOne}}
+            </a>
+            &centerdot;
+            <a href="{{following_url}}" class="following-link">
+              <span class="following-count">{{following}}</span>
+              <span class="following-text">following</span>
+            </a>
+            &centerdot;
+            <a href="{{starred_url}}" class="starred-link">
+              <span class="iconify" data-icon="ant-design:star-outlined" data-inline="false"></span>
+              <span class="starred-count">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </script>
     <script id="repo-template" type="text/x-handlebars-template">
       <ul>
         {{#each repos}}
@@ -17,7 +57,7 @@
             <div class="block">
               <div class="info">
                 <div class="top">
-                  <h3 class="name"><a href="{{this.html_url}}">{{this.name}}</a></h3>
+                  <h3 class="name"><a class="repo-link" href="{{this.html_url}}">{{this.name}}</a></h3>
                 </div>
                 {{#if this.description}}
                   <div class="middle text-gray">
@@ -32,7 +72,7 @@
                 </div>
               </div>
               <div class="side">
-                <button class="star"><span class="iconify" data-icon="ant-design:star-outlined" data-inline="false"></span><span class="text">Star</span></button>
+                <button><span class="iconify" data-icon="ant-design:star-outlined" data-inline="false"></span><span class="text">Star</span></button>
               </div>
             </div>
           </li>
