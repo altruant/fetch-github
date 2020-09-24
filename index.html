@@ -5,6 +5,8 @@
     <title>altruant/fetch-github</title>
 
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
     <div id="user-repositories-list"></div>
@@ -14,11 +16,23 @@
           <li>
             <div class="block">
               <div class="info">
-                <div class="title"><span class={{this.name}}>{{this.name}}</span></div>
-                <div class="update"><span class="updated-when">Updated at {{this.updated_at}}</span></div>
+                <div class="top">
+                  <h3 class="name"><a href="{{this.html_url}}">{{this.name}}</a></h3>
+                </div>
+                {{#if this.description}}
+                  <div class="middle text-gray">
+                    <span class="description">{{this.description}}</span>
+                  </div>
+                {{/if}}
+                <div class="bottom text-gray">
+                  {{#if this.language}}
+                  <span class="language {{this.language}}">{{this.language}}</span>
+                  {{/if}}
+                  <span class="updated-when">Updated at {{this.updated_at}}</span>
+                </div>
               </div>
               <div class="side">
-                <button><span class="iconify" data-icon="ant-design:star-outlined" data-inline="false"></span>Star</button>
+                <button class="star"><span class="iconify" data-icon="ant-design:star-outlined" data-inline="false"></span><span class="text">Star</span></button>
               </div>
             </div>
           </li>
