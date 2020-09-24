@@ -4,6 +4,7 @@ $light-gray: #e1e4e8;
 $scarlet-red: #e34c26;
 $mellow-yellow: #f1e05a;
 $plum-purple: #563d7c;
+$lovely-pink: #c6538c;
 
 body {
   font-family: 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
@@ -87,6 +88,16 @@ a {
   height: 12px;
   border-radius: 100%;
   background-color: $plum-purple;
+  margin-right: 8px;
+}
+.SCSS:before {
+  vertical-align: middle;
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: $lovely-pink;
   margin-right: 8px;
 }
 .text-gray {
