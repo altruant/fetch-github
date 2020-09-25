@@ -9,14 +9,21 @@
     <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
-    <div id="user-info"></div>
-    <div id="user-repositories-list"></div>
+    <div class="container">
+      <div class="card">
+        <div id="user-info"></div>
+        <div id="org-info"></div>
+      </div>
+      <div id="user-repositories-list"></div>
+    </div>
     <script id="info-template" type="text/x-handlebars-template">
       <div id="infobox">
         <div class="userinfo-top">
-          <div class="img-block">
-            <img src="{{avatar_url}}">
-          </div>
+          <a href="https://github.com/settings/profile" class="edit profile">
+            <div class="img-block tooltip" data-text="Change your avatar">
+              <img src="{{avatar_url}}">
+            </div>
+          </a>
           <div class="info-block">
             <h2 class="names">
               <span class="fullname">{{name}}</span>
@@ -47,6 +54,18 @@
               <span class="starred-count">0</span>
             </a>
           </div>
+        </div>
+      </div>
+    </script>
+    <script id="org-template" type="text/x-handlebars-template">
+      <div class="org-container">
+        <h3 class="org-text">Organizations</h3>
+        <div class="flex-container">
+        {{#each orgs}}
+          <a href="{{this.url}}" class="tooltip-link {{this.login}}">
+            <img src="{{this.avatar_url}}">
+          </a>
+        {{/each}}
         </div>
       </div>
     </script>
